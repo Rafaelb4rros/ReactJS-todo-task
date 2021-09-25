@@ -1,0 +1,177 @@
+//FORM
+
+.TodoListForm_container {
+  display: flex;
+  width: calc(100% - 5rem);
+  height: 50px;
+  justify-content: start;
+  align-items: start;
+}
+
+.TodoList-form_container {
+  display: flex;
+  height: 50px;
+}
+
+.TodoList-form_input:valid + .TodoList-form_btn {
+  transition: 1s;
+  background-color: #0392b6;
+  color: #f1f1f1;
+}
+
+.TodoList-form_input:invalid + .TodoList-form_btn:hover {
+  transition: 0.5s;
+  background-color: #4f8f7f;
+}
+.TodoList-form_input:valid + .TodoList-form_btn:hover {
+  transition: 0.5s;
+  background-color: #7fdbf1;
+}
+
+.TodoList-form_btn {
+  padding: 0.5rem;
+  border: none;
+  background-color: #035e7a;
+  cursor: pointer;
+  color: rgb(253, 253, 253);
+}
+
+.TodoList-form_input {
+  width: 0vh;
+  background-color: #fff;
+  height: 50px;
+  border: none;
+  color: #333;
+  padding: 0 1rem;
+  font-size: 17px;
+}
+.active {
+  transition: 1s;
+  width: 57vh;
+}
+
+.TodoList-form_input:focus {
+  outline: none;
+  border: solid 1px rgb(191, 238, 252);
+}
+
+.TodoList-form_input:focus::placeholder {
+  transition: 0.2s;
+  color: #f1f1f1;
+}
+//FORM END
+//TODO LIST
+.TodoList-Container {
+  margin-top: 1rem;
+  width: calc(100% - 5rem);
+  height: calc(100% - 5rem);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.TodoList {
+  width: calc(32% - 1%);
+  position: relative;
+  text-align: center;
+}
+
+.TodoList-header {
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: #606060;
+  padding: 1rem 0;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+.trash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.3rem;
+  background-color: #fff;
+  color: #606060;
+  padding: 1rem 0;
+  height: 100%;
+  margin-bottom: 2.5rem;
+}
+.done {
+  padding-left: 4rem;
+  border-left: 1px solid rgba(0, 0, 0, 00.5);
+  height: 100%;
+  li {
+    opacity: 0.5;
+  }
+  p {
+    text-decoration: line-through;
+  }
+  .TodoList-Item_done {
+    display: none;
+  }
+}
+.trash .info {
+  margin-bottom: 5rem;
+  color: #f1f1f1;
+}
+//TODO END
+
+//TODO ITEM
+.TodoList-Item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  min-width: 50%;
+  text-align: initial;
+  width: auto;
+  height: auto;
+  padding: 15px;
+  border-top: 10px solid rgba(230, 236, 245, 0.4);
+  box-shadow: 0 1px 4px rgba(192, 208, 230, 0.8);
+}
+.TodoList-Item-icon_container {
+  display: flex;
+}
+.TodoList-Item_delete {
+  display: block;
+  opacity: 0.5;
+  border: none;
+  background-color: transparent;
+}
+.TodoList-Item_delete:hover {
+  opacity: 1;
+}
+.inProgress {
+  .TodoList-Item_backToActive {
+    display: none;
+  }
+}
+.TodoList-Item_backToActive {
+  border: none;
+  opacity: 0.5;
+  background-color: transparent;
+}
+.TodoList-Item_backToActive:hover {
+  opacity: 1;
+}
+.TodoList-Item_done {
+  display: block;
+  margin-left: 1rem;
+  opacity: 0.5;
+  border: none;
+  background-color: transparent;
+}
+.TodoList-Item_done:hover {
+  opacity: 1;
+}
+.TodoLis-Item_content {
+  display: block;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: calc(100% - 2rem);
+  font-weight: 700;
+  color: #333;
+  font-size: 18px;
+}
